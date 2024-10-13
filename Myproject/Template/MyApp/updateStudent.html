@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'MyApp/common.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'MyApp/css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/css/table.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/css/updateStudent.css' %}">
+</head>
+<body>
+  {% if messages %}
+        {% for message in messages %}
+            <script>
+                alert("Please enter all values")
+            </script>
+        {% endfor %}
+    {% endif %}
+<form method="post">
+     {% csrf_token %}
+    <div class="left-div">
+    <label  id="roll" for="rollno">Roll No :</label><input type="number" id="rollno" name="rollno" value="{{student.roll_no}}"><br><br>
+    <label  id="reg_no" for="register_no">Register No :</label><input type="text" id="register_no" name="register_no" value="{{student.reg_no}}"><br><br>
+    <label  id="fname" for="fullname">Full Name :</label><input type="text" id="fullname" name="fullname" value="{{student.full_name}}"><br><br>
+    <label  id="dob" for="birthdate">Date of Birth :</label><input type="text" id="birthdate" name="birthdate" value="{{student.birth_date|date:'Y-m-d'}}"><br><br>
+    <label  id="gend" for="gender">Gender :</label><input type="text" id="gender" name="gender" value="{{student.gender}}"><br><br>
+    </div>
+    <div class="right-click">
+    <label  id="father" for="father_name">Father's Name :</label><input type="text" id="father_name" name="father_name" value="{{student.father_name}}"><br><br>
+    <label  id="mother" for="mother_name">Mother's Name :</label> <input type="text" id="mother_name" name="mother_name" value="{{student.mother_name}}"><br><br>
+    <label  id="emailId" for="email">Email ID:</label><input type="email" id="email" name="email" value="{{student.email}}"><br><br>
+    <label  id="phoneno" for="phone">Phone No:</label><input type="number" id="phone" name="phone" value="{{student.phone_no}}"><br><br>
+    <label  id="add" for="address">Full Address:</label><input type="text" id="address"  name="address" value="{{student.address}}"></input><br><br>
+    </div>
+    <div class="buttons">
+     <input type="submit" value="UPDATE">
+     <button><a href="{% url 'update' %}">BACK</a></button>
+    </div>
+</form>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'MyApp/common.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'MyApp/css/SecondCss.css' %}">
+<script src="{% static 'MyApp/javascript/sample.js' %}"></script>
+</head>
+<body>
+
+<div class="form">
+    <div class="datas">
+       <form autocomplete="off" method="post" action="/create/">
+           {% csrf_token %}
+        <div class="first_five">
+            <label  id="roll" for="rollno">Roll No :</label><input type="text" id="rollno" name="rollno"><br><br>
+            <label  id="reg_no" for="register_no">Register No :</label><input type="text" id="register_no" name="register_no"><br><br>
+            <label  id="fname" for="fullname">Full Name :</label><input type="text" id="fullname" name="fullname"><br><br>
+            <label  id="dob" for="bithdate">Date of Birth :</label><input type="date" id="bithdate" name="birthdate"><br><br>
+            <label  id="gend" for="gender">Gender :</label><input type="radio" id="gender" value="Male" name="gender"> Male <br><input type="radio" id="gender" value="Female" name="gender" class="female"><p id="female_name">Female</p><br><br>
+        </div>
+        <div class="last_five">
+            <label  id="father" for="father_name">Father's Name :</label><input type="text" id="father_name" name="father_name"><br><br>
+            <label  id="mother" for="mother_name">Mother's Name :</label><input type="text" id="mother_name" name="mother_name"><br><br>
+            <label  id="emailId" for="email">Email ID:</label><input type="email" id="email" name="email"><br><br>
+            <label  id="phoneno" for="phone">Phone No:</label><input type="text" id="phone" name="phone"><br><br>
+            <label  id="add" for="address">Full Address:</label><textarea  id="address" name="address"></textarea><br><br>
+           <div class="clear">
+            <button class="clearData" id="dataclear"  onclick="myFunc()">Clear Data</button>
+           </div>
+            <div class="buttons">
+            <input type="submit" value="ADD DATA">
+        </div>
+        </div>
+        </form>
+        <div class="buttons-others">
+            <a href="{% url 'view' %}"><button>READ DATA</button></a>
+            <a href="{% url 'update' %}"><button>UPDATE DATA</button></a>
+            <a href="{% url 'delete' %}"><button>DELETE DATA</button></a>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

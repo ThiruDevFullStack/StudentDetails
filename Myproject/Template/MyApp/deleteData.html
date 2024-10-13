@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'MyApp/common.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'MyApp/css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/css/tableNew.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/css/viewData.css' %}">
+</head>
+<body>
+
+<div>
+    <h1>ALL DATAS</h1>
+    <form method="PUT" action="/update">
+    <input type="text" id="search" name="search" placeholder="search here ..." value="{{request.GET.SEARCH}}">
+    <input type="submit" value="Search Data">
+    <button href="{% url 'update' %}">Show All</button>
+       <button><a href="{% url 'home' %}" style="text-decoration:none;
+color:white;">Home</a></button>
+    </form>
+     {% if messages %}
+        {% for message in messages %}
+            <h3>{{message}}</h3>
+        {% endfor %}
+    {% endif %}
+    <div class="all-data">
+<!--        {% if student.exists %}-->
+        <table>
+            <tr>
+                <th>Roll No</th>
+                <th>Register No</th>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Email ID</th>
+                <th>Phone No</th>
+                <th>Address</th>
+            </tr>
+            {% for stud in student %}
+            <tr>
+                <td>{{stud.roll_no}}</td>
+                <td>{{stud.reg_no}}</td>
+                <td>{{stud.full_name}}</td>
+                <td>{{stud.birth_date}}</td>
+                <td>{{stud.gender}}</td>
+                <td>{{stud.father_name}}</td>
+                <td>{{stud.mother_name}}</td>
+                <td>{{stud.email}}</td>
+                <td>{{stud.phone_no}}</td>
+                <td>{{stud.address}}</td>
+                <td id="update"><a href="/deleteStud/{{stud.id}}"><button id="updateBtn">DELETE</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+<!--        {% endif %}-->
+    </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

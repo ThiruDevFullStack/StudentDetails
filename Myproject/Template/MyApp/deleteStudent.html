@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'MyApp/common.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'MyApp/css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/css/deleteStudent.css' %}">
+</head>
+<body>
+
+<form method="post">
+    <h3>Are you sure to delete</h3> <h2>{{name}}</h2> <h3>data ?</h3>
+    {% csrf_token %}
+    <input type="submit" value="Yes">
+    <button><a href="{% url 'delete' %}">No</a></button>
+</form>
+</body>
+{% endblock %}
+</html>

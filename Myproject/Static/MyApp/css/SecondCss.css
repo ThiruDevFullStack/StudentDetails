@@ -1,0 +1,228 @@
+{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+body{
+   font-family: "Times New Roman", Georgia, serif;
+/*   background-image: linear-gradient(to left, #f034a8, #df3ebe, #c74bd3, #a758e6, #7b64f5);*/
+   background-image: linear-gradient(to left, #eb3bba, #dc25c6, #c70fd3, #aa07e3, #7f16f3);
+
+}
+.main{
+   background-image: linear-gradient(to bottom, #c5d919, #5adc72, #00d3b6, #00c2dd, #57acdc);
+   background-image: linear-gradient(to left, #eb3bba, #dc25c6, #c70fd3, #aa07e3, #7f16f3);
+}
+.common{
+   width:50%;
+   padding:10px 30px;
+   /* border:2px solid blue; */
+   display:flex;
+   gap:30px;
+   align-items:center;
+}
+.common h1{
+   color:white;
+}
+img{
+    padding:5px;
+    background-color:white;
+    border:2px solid white;
+    border-radius:50%;
+}
+
+.form{
+    margin:0 auto;
+    /*background-image: linear-gradient(to left, #f034a8, #df3ebe, #c74bd3, #a758e6, #7b64f5);*/
+    padding:5px 30px;
+    max-height:500px;
+    max-width:900px;
+    /*width:100%;*/
+
+    /* border:2px solid blue;*/
+}
+.datas{
+    height:550px;
+    width:100%;
+
+   /*  border:2px solid green;*/
+}
+/* manipulation of the forms */
+form{
+    display: flex;
+    justify-content: center;
+
+}
+
+.first_five,.last_five{
+
+    border: 2px solid blue;
+    width: 50%;
+}
+/*
+.first_five{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.first_five, .last_five {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.first_five label, .last_five label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.first_five input[type="text"], .last_five input[type="text"],
+.first_five input[type="date"], .last_five input[type="email"],
+.last_five textarea {
+   /* width: calc(100% - 130px);*/
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.last_five textarea {
+    height: 80px;
+    resize: none;
+    position: relative;
+    left: 120px;
+}
+
+.first_five input[type="radio"] {
+    margin-left: 5px;
+}
+
+.first_five input[type="radio"] + label {
+    margin-right: 10px;
+}
+
+.first_five input[type="radio"]:not(:first-child) {
+    margin-left: 2px;
+}
+
+#add{
+    /* background-color: #4CAF50; */
+    position: absolute;
+}
+
+.female{
+    position: relative;
+    left: 120px;
+}
+#female_name{
+    position: relative;
+    left: 140px;
+    bottom: 36px;
+}
+
+
+/* buttons manipulations */
+.clear{
+
+
+    width: 45%;
+    /* border: 2px solid blue; */
+    position: absolute;
+    margin-top: 40px;
+    right: 170px;
+}
+.clearData{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 180px;
+}
+
+.clearData:hover{
+    background-color: #d17d08;
+    transform: scale(1.05);
+}
+
+
+.buttons {
+
+    width: 45%;
+    /* border: 2px solid blue; */
+    position: absolute;
+    bottom: 20px;
+    right: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.buttons-others{
+    width: 45%;
+    /* border: 2px solid blue; */
+    position: absolute;
+    bottom:20px;
+    left:650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+
+.buttons input[type="submit"],
+.buttons-others button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0daacd;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 180px;
+}
+
+.buttons input[type="submit"]:hover,
+.buttons-others button:hover{
+    background-color: #0c6ded;
+    transform: scale(1.05);
+}
+
+.buttons input[type="submit"]:active,
+.buttons-others button:active {
+    transform: scale(0.98);
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .buttons input[type="submit"],
+    .buttons-others button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+

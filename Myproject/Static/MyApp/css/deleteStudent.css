@@ -1,0 +1,62 @@
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    margin:200px auto;
+}
+
+h1{
+font-size:40px;
+}
+h2{
+display:inline;
+color:#bd0f3d;
+
+}
+
+
+/* Style the heading */
+h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+    display:inline;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the No button */
+button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/* Ensure the link inside the No button looks like a button */
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect for buttons */
+button:hover, input[type="submit"]:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,51 @@
+/* Table Styles */
+table {
+    margin:0 auto;
+    width: 80%;
+    border-collapse: collapse;
+    /*margin: 20px 0;*/
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px 5px;
+    border: 2px solid #ddd;
+
+}
+
+th {
+    text-align:center;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animation for table on load */
+@keyframes tableFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    animation: tableFadeIn 0.8s ease-in-out;
+}
+#update{
+    padding: 10px 5px;
+    border: 2px solid transparent;
+}
+#update:hover{
+    background-color:#eb3bba;
+    padding: 10px 5px;
+    border: 2px solid transparent;
+}
+#updateBtn:hover{
+    background-color:purple;
+    border: 2px solid white;
+}

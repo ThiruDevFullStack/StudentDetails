@@ -1,0 +1,87 @@
+/* General form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+/* H1 Title Styling */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+h3{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Input field hover and focus effects */
+input[type="text"]:hover,
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button styling */
+input[type="submit"], button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ed1851;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+/* Button hover effect */
+input[type="submit"]:hover, button:hover {
+    background-color: transparent;
+    border:2px solid white;
+}
+
+/* Button styling for "Show All" */
+button {
+    background-color: #ed1851;
+}
+
+/* Button hover effect for "Show All" */
+button:hover {
+    background-color: transparent;
+    border:2px solid white;
+}
+
+/* Form input and button alignment for larger screens */
+@media (min-width: 600px) {
+    form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    input[type="text"] {
+        margin-bottom: 0;
+    }
+
+    input[type="submit"], button {
+        margin-left: 10px;
+    }
+}
